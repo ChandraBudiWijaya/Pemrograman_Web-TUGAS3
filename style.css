@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-    min-height: 100vh;
+    min-height: 130vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: white;
@@ -37,6 +37,7 @@ section{
     background-color: #000000;
     background: transparent;
     backdrop-filter: blur(10px);
+    height: max-content;
 }
 .head-dashboard h1, p {
     padding-left: 14px;
