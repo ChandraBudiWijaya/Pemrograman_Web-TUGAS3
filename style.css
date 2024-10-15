@@ -1,0 +1,152 @@
+/* General Styling */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    opacity: 1;
+    background-image: linear-gradient(#b75342 2.3000000000000003px, transparent 2.3000000000000003px), linear-gradient(to right, #b75342 2.3000000000000003px, #000000 2.3000000000000003px);
+    background-size: 46px 46px;
+}
+
+/* Header Styling */
+header {
+    background-color: #b75342; /* Warna merah-oranye cerah */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Londrina Sketch';
+}
+
+section{
+    flex-grow: 1;
+    display: flex;
+}
+
+.head-dashboard{
+    text-align: justify;
+    padding: 8px;
+    margin: 40px;
+    margin-left: 48px;
+    border-radius: 30px;
+    outline: 1px solid white;
+    background-color: #000000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+.head-dashboard h1, p {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px; /* Spasi antar huruf */
+}
+
+/* Navigation Styling */
+nav {
+    justify-content: space-around;
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ff6347; /* Warna merah-oranye */
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffa07a; /* Warna oranye muda saat di-hover */
+    transform: scale(1.1); /* Membesar sedikit saat di-hover */
+}
+
+/* Grid Container Styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsif */
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Item Styling */
+.grid-item {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Agar gambar yang terlalu besar terpotong */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border: 8px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Membuat gambar proporsional dan menyesuaikan dengan kotak */
+    transition: transform 0.3s ease;
+    
+}
+
+/* Hover Effects for Grid Items */
+.grid-item:hover {
+    transform: scale(1.05); /* Membesar sedikit saat di-hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Bayangan lebih dalam saat hover */
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Membuat gambar sedikit membesar saat di-hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #b75342; /* Warna yang sama dengan header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* Full width */
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        display: flex;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item img {
+        font-size: 1.2rem;
+    }
+}
